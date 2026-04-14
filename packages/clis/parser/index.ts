@@ -27,6 +27,12 @@ function main() {
       coerce: untildify,
       demandOption: true,
     })
+    .option('mods', {           // ← NEU
+    alias: 'm',
+    type: 'array',
+    describe: 'paths to extra .scs mod files (e.g. ProMods)',
+    default: [],
+    })
     .option('outputDir', {
       alias: 'o',
       describe: 'Path to dir JSON and PNG files should be written to',
